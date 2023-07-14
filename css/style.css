@@ -1,0 +1,866 @@
+ html {
+     scroll-behavior: smooth;
+ }
+ .overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.4);
+     z-index: 1100;
+     display: none;
+ }
+
+ dialog {
+    padding-top: 10px;
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     height: 75%;
+     width: 80%;
+     z-index: 1101;
+     border: 0;
+     outline: 0;
+     border-radius: 20px;
+     background-color: rgba(55, 54, 54, 0.3);
+     backdrop-filter: blur(15px);
+     overflow: scroll;
+     /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+
+ }
+ dialog::-webkit-scrollbar{
+    background-color:transparent;
+    width: 0;
+ }
+ /* dialog::backdrop{
+     background-color: rgba(0, 0, 0, 0.468);
+     width: 0;
+ } */
+
+ 
+
+ .dialogContainer {
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+     display: flex;
+     justify-content: space-evenly;
+ }
+
+
+ .displayHidden {
+     visibility: hidden;
+ }
+
+ .movieDescription {
+    /* background-color: #029bb2; */
+    height: 100%;
+     width: 45%;
+     color: #fff;
+     /* overflow: scroll; */
+   
+ }
+ /* .movieDescription::-webkit-scrollbar{
+    width: 0px;
+ } */
+ .movieDescription p{
+    font-size: 14px;
+ }
+ #playingPlace{
+    min-width: 450px;
+    min-height: 300px;
+ }
+
+ #up-btn {
+     position: fixed;
+     bottom: 35px;
+     right: 20px;
+     z-index: 5;
+     width: fit-content;
+     height: min-content;
+     color: #fff;
+     border: 0;
+     background-color: rgb(13, 150, 213);
+     font-size: 30px;
+     font-weight: bold;
+     border-radius: 5px;
+ }
+
+ .modal-close {
+    
+     position: sticky;
+     top: 0px;
+     right: 0px;
+     margin-left: auto;
+     /* transform: translate(1400%, 0%); */
+     background-color: #e42d2d;
+     display: flex;
+     
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     outline: 0;
+ }
+
+ .fa-x {
+     font-size: 20px;
+     color: #fff;
+     font-weight: 900;
+ }
+
+
+ .modal-close:hover {
+     opacity: .8;
+ }
+
+ .fa-angle-up {
+     top: 0;
+     left: 0;
+ }
+
+ /* #home {
+    transition: all 3s;
+  } */
+ .home-search-box {
+     position: absolute;
+     display: flex;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 60%;
+     min-width: 100px;
+     max-height: 50px;
+
+ }
+
+ .navTxt {
+     font-size: 18px;
+ }
+
+
+ .home-overlay {
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom, rgba(52, 51, 51, 0.237), rgba(53, 53, 54, 0.423));
+
+     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+ }
+
+ #mainText {
+     font-size: 50px;
+     color: #e7e7e7;
+     z-index: 5;
+     font-family: 'Montserrat Alternates', sans-serif;
+     padding: 3px;
+     position: absolute;
+     font-weight: 600;
+     top: 47%;
+
+     left: 50.4%;
+     transform: translate(-50%, -150%);
+     background-color: rgba(173, 168, 168, 0.551);
+     border-radius: 20px;
+     width: 50%;
+
+
+     text-align: center;
+     text-transform: capitalize;
+ }
+
+ .button {
+     background-color: transparent;
+     border: 3px solid rgba(0, 152, 163, 0.862);
+     padding: 5px 15px;
+     font-weight: 400;
+     font-size: 18px;
+     color: #e7e7e7;
+     border-radius: 5px;
+     transition: .5s ease-in-out;
+     position: absolute;
+     top: 58%;
+     padding: 6px 15px;
+
+
+ }
+
+ #select-list {
+     background-color: #2e828f;
+     width: 30px;
+     position: absolute;
+     height: 100%;
+     border: 5px solid #2e828f;
+     box-sizing: border-box;
+     outline: none;
+
+ }
+
+ select {
+     color: #fff;
+
+
+ }
+
+ option {
+     background-color: #05a5df;
+     color: black;
+ }
+
+ #form1 {
+     background-color: #f5f6f4a5;
+     padding-left: 110px;
+     box-sizing: border-box;
+     height: 50px;
+     border: 0px solid #029bb2;
+ }
+
+ .button-search {
+     background-color: rgba(0, 152, 163, 0.542);
+ }
+
+
+
+ .button-search:hover {
+     background-color: rgba(0, 152, 163, 0.862);
+ }
+
+ #icon-movie {
+     width: 30px;
+ }
+
+ #cards {
+     transition: all .9s;
+ }
+
+ #cards:hover {
+     box-shadow: 0px 4px 10px 0 rgb(130, 130, 125) !important;
+ }
+
+ .fa-play {
+     position: absolute;
+     top: 49%;
+     right: 17%;
+     font-size: 37px;
+     margin: auto;
+     color: #40f400;
+ }
+
+
+ .playLink {
+     position: absolute;
+     top: 45%;
+     right: 18%;
+     font-size: 37px;
+     margin: auto;
+     background-color: #40f400;
+ }
+
+ #navbar {
+     background-color: #00e2e206;
+     -webkit-backdrop-filter: blur(55px);
+     backdrop-filter: blur(15px);
+ }
+
+ #web-description {
+     background: url('../images/mobile/R\ \(1\).jpg') no-repeat center;
+     background-size: cover;
+     box-sizing: border-box;
+     padding: 0;
+
+ }
+
+ #overlay-text {
+     background-color: #ffffff1e;
+     padding: 28px 25px;
+     color: #fff;
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+     -webkit-backdrop-filter: blur(15px);
+     backdrop-filter: blur(15px);
+ }
+
+ #nav-logo {
+
+     transition: all 1s;
+ }
+
+ #nav-logo:hover {
+     /* transform: perspective(200px) rotateX(45deg); */
+     /* transform: skewX(-20deg); */
+     transform: rotate3d(10, 2, 2, 45deg);
+ }
+
+ .nav-list1,
+ .nav-list2,
+ .nav-list3 {
+     transition: all 1s;
+ }
+
+ .nav-list1:hover,
+ .nav-list2:hover,
+ .nav-list3:hover {
+     transform: scale3d(1.1, 1.1, 1.1);
+ }
+
+
+
+ @media (width >=1285px) {
+     #select-list {
+         background-color: #2e828f;
+         width: 100px;
+         position: absolute;
+         height: 100%;
+         border: 5px solid #2e828f;
+         box-sizing: border-box;
+         outline: none;
+
+     }
+
+     .button-search {
+         background-color: rgba(0, 152, 163, 0.542);
+         width: 100px;
+     }
+
+     #nav-logo {
+         font-size: 28px;
+         transition: all 1s;
+     }
+
+     #home {
+
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 98vh;
+         margin-top: -0px;
+         position: relative;
+         clip-path: polygon(0 0vh, 100% 0, 100% 100vh, 0 100%);
+         animation: fadeBackground 30s infinite;
+     }
+
+     #mainText {
+         font-size: 50px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: Helvetica,
+             Arial,
+             sans-serif;
+         padding: 3px;
+         position: absolute;
+         font-weight: 600;
+         top: 47%;
+
+         left: 50.4%;
+         transform: translate(-50%, -150%);
+         background-color: rgba(44, 42, 42, 0.148);
+         border-radius: 20px;
+         width: 50%;
+
+
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: rgba(0, 152, 163, 0.862);
+         border: 3px solid rgba(0, 152, 163, 0.862);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 58%;
+
+
+     }
+
+
+
+ }
+
+ @media (width >=1116px) and (width <=1284px) {
+     #nav-logo {
+         font-size: 28px;
+         transition: all 1s;
+     }
+
+     #home {
+
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 98vh;
+         margin-top: -0px;
+         position: relative;
+         animation: fadeBackground 30s infinite;
+     }
+
+     #mainText {
+         font-size: 50px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         padding: 3px;
+         position: absolute;
+         font-weight: 600;
+         top: 47%;
+
+         left: 50.4%;
+         transform: translate(-50%, -150%);
+         background-color: rgba(173, 168, 168, 0.551);
+         border-radius: 20px;
+         width: 50%;
+
+
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgba(0, 152, 163, 0.862);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 58%;
+
+
+     }
+ }
+
+
+
+
+
+
+
+
+
+
+
+ @media (width <=1115px) and (width >=860px) {
+     #nav-logo {
+         font-size: 28px;
+         transition: all 1s;
+     }
+
+     #home {
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         /* background-image: linear-gradient(), url("images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         object-fit: contain;
+         background-repeat: no-repeat;
+         height: 78vh;
+         position: relative;
+         animation: fadeBackground 30s infinite;
+
+     }
+
+     .home-search-box {
+         position: absolute;
+         display: flex;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 80%;
+         min-width: 100px;
+         max-height: 40px;
+
+     }
+
+     #form1 {
+         background-color: #f5f6f4a5;
+         padding-left: 85px;
+         box-sizing: border-box;
+         height: 40px;
+         border: 0px solid #029bb2;
+     }
+
+     #select-list {
+         background-color: #2e828f;
+         width: 80px;
+         position: absolute;
+         height: 100%;
+         border: 5px solid #2e828f;
+         box-sizing: border-box;
+         outline: none;
+
+     }
+
+     #mainText {
+         font-size: 42px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         padding: 3px;
+         position: absolute;
+         font-weight: 600;
+         top: 45%;
+         left: 50.4%;
+         transform: translate(-50%, -150%);
+         background-color: rgba(173, 168, 168, 0.551);
+         border-radius: 20px;
+         width: 60%;
+
+
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgba(0, 152, 163, 0.862);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 58%;
+
+
+     }
+
+
+ }
+
+ @media (width <=859px) and (width >=400px) {
+     .dialogContainer {
+         display: inline-block;
+         /* justify-content: space-evenly; */
+     }
+         .movieContainer {
+             width: 90%;
+         }
+
+     .movieDescription {
+         width: 90%;
+        width: 80%;
+     }
+     #playingPlace{
+        border-radius: 20px;
+        
+        min-width: 75%;
+        min-height: 190px;
+     }
+     #nav-logo {
+         font-size: 23px;
+         transition: all 1s;
+     }
+
+
+     #home {
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         /* background-image: linear-gradient(), url("images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         object-fit: contain;
+         background-repeat: no-repeat;
+         height: 78vh;
+         position: relative;
+         animation: fadeBackgroundsmall 30s infinite;
+
+     }
+
+     .home-search-box {
+         position: absolute;
+         display: flex;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 80%;
+         min-width: 100px;
+         max-height: 40px;
+
+     }
+
+     #form1 {
+         background-color: #f5f6f4a5;
+         padding-left: 105px;
+         box-sizing: border-box;
+         height: 40px;
+         border: 0px solid #029bb2;
+     }
+
+     #select-list {
+         background-color: #2e828f;
+         width: 80px;
+         position: absolute;
+         height: 100%;
+         border: 5px solid #2e828f;
+         box-sizing: border-box;
+         outline: none;
+
+     }
+
+     #mainText {
+         font-size: 32px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         padding: 3px;
+         position: absolute;
+         font-weight: 600;
+         top: 50%;
+         left: 50.4%;
+         transform: translate(-50%, -150%);
+         background-color: rgba(173, 168, 168, 0.551);
+         border-radius: 20px;
+         width: 70%;
+
+
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: transparent;
+         border: 3px solid rgba(0, 152, 163, 0.862);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 58%;
+     }
+
+     @keyframes fadeBackgroundsmall {
+
+         0%,
+         20% {
+             background-image: url("../images/1.jpg");
+
+             /* background-size: cover;
+                #home::after {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+                } */
+
+         }
+
+         25%,
+         45% {
+             background-image: url("../images/mobile/kode-lgx-fs2.jpg");
+         }
+
+         50%,
+         70% {
+             background-image: url("../images/mobile/9f19c33f08c671c3092d2d94cf3699df.jpg");
+         }
+
+         75%,
+         95% {
+             background-image: url("../images/mobile/starWars.jpg");
+         }
+     }
+
+
+ }
+
+
+ @media (width <400px) {
+     #nav-logo {
+         font-size: 25px;
+         transition: all 1s;
+     }
+
+     #home {
+         /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../images/wa.jpg"); */
+         /* background-image: linear-gradient(), url("images/wa.jpg"); */
+         background-position: center;
+         background-size: cover;
+         object-fit: contain;
+         background-repeat: no-repeat;
+         height: 100vh;
+         position: relative;
+         animation: fadeBackgroundsmall 30s infinite;
+
+     }
+
+     .dialogContainer {
+         display: inline;
+     }
+
+     .movieDescription {
+         width: 100%;
+     }
+
+     #playingPlace {
+        border-radius: 20px;
+         min-width: 100% !important;
+         height: auto;
+     }
+
+     .home-search-box {
+         position: absolute;
+         display: flex;
+         top: 45%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 80%;
+         min-width: 100px;
+         max-height: 40px;
+
+     }
+
+     #form1 {
+         background-color: #f5f6f4a5;
+         padding-left: 80px;
+         box-sizing: border-box;
+         height: 40px;
+         border: 0px solid #029bb2;
+     }
+
+     #select-list {
+         background-color: #2e828f;
+         font-size: 15px;
+         width: 70px;
+         position: absolute;
+         height: 100%;
+         border: 5px solid #2e828f;
+         box-sizing: border-box;
+         outline: none;
+
+     }
+
+     #mainText {
+         font-size: 23px;
+         color: #e7e7e7;
+         z-index: 5;
+         font-family: 'Montserrat Alternates', sans-serif;
+         padding: 3px;
+         position: absolute;
+         font-weight: 600;
+         top: 40%;
+         left: 50.4%;
+         transform: translate(-50%, -150%);
+         background-color: rgba(5, 5, 5, 0.277);
+         border-radius: 20px;
+         width: 70%;
+
+
+         text-align: center;
+         text-transform: capitalize;
+     }
+
+     .button {
+         background-color: rgba(34, 193, 229, 0.862);
+         ;
+         border: 3px solid rgba(34, 193, 229, 0.862);
+         padding: 5px 15px;
+         font-weight: 400;
+         font-size: 18px;
+         color: #e7e7e7;
+         border-radius: 5px;
+         transition: .5s ease-in-out;
+         position: absolute;
+         top: 64%;
+     }
+
+     #web-description {
+         background: url('../images/mobile/kode-lgx-fs2.jpg') no-repeat center;
+         background-size: cover;
+         box-sizing: border-box;
+         padding: 0;
+         display: flex;
+         height: 0;
+         overflow: scroll;
+
+     }
+
+     @keyframes fadeBackgroundsmall {
+
+         0%,
+         20% {
+             background-image: url("../images/mobile/1.jpg");
+
+             /* background-size: cover;
+                #home::after {
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+                } */
+
+         }
+
+         25%,
+         45% {
+             background-image: url("../images/mobile/kode-lgx-fs2.jpg");
+         }
+
+         50%,
+         70% {
+             background-image: url("../images/mobile/9f19c33f08c671c3092d2d94cf3699df.jpg");
+         }
+
+         75%,
+         95% {
+             background-image: url("../images/mobile/starWars.jpg");
+         }
+     }
+
+
+ }
+
+
+
+ .button:hover {
+     background-color: rgba(0, 152, 163, 0.6);
+     border: border 3px solid rgba(0, 152, 163, 0.6);
+     outline: none;
+
+     color: rgb(243, 247, 249);
+ }
+
+ @keyframes fadeBackground {
+
+     0%,
+     20% {
+         background-image: url("../images/1.jpg");
+
+
+         /* background-size: cover;
+            #home::after {
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            } */
+
+     }
+
+     25%,
+     45% {
+         background-image: url("../images/spider_man.jpg");
+
+     }
+
+     50%,
+     70% {
+         background-image: url("../images/2.jpg");
+
+     }
+
+     75%,
+     95% {
+         background-image: url("../images/4.jpg");
+
+     }
+ }

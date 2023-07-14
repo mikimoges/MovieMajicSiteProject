@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/icon.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
+
+
+    <!-- <script src="js/movies.js"></script> -->
+    <title>MovieMagic</title>
+</head>
+<button id="up-btn"><i class="fa-sharp fa-solid fa-angle-up"></i></button>
+rgba(70, 67, 67, 0.3)rgba(70, 67, 67, 0.3)
+<body class="bg-dark">
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark ">
+        <div class="container-fluid">
+
+            <a id="nav-logo" class="sticky-bottom navbar-brand font-monospace ms-3" href="#">MovieMagic</a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active nav-list1 px-4 navTxt" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link nav-list2 px-4 navTxt" id="movies-btn-nav" href="#">Movies</a>
+                    <a class="nav-link nav-list3 navTxt px-4" id="tv-serial-nav-btn" href="#">Tv-Serials</a>
+                    <a href="#" class="nav-link nav-list3 me-5 navTxt px-4" id="animation-nav-btn">Anime</a>
+                </div>
+
+
+            </div>
+    </nav>
+
+<div class="overlay"></div>
+
+    <dialog id="playBox">
+    <div class="modal-close" id="closeModalTrailer">
+        <i class="fa-solid fa-x"></i>
+    </div>
+        <div class="dialogContainer">
+        
+            <!-- <h1>hello</h1> -->
+            <div class="movieContainer">
+                <iframe id="playingPlace"  frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="movieDescription"style="padding-left: 10px" >
+                <h1 id="trailer-title">Movie Traller</h1>
+                <h5 id="rating-modal">⭐7.9/10</h5>
+                <p id="movie-overview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim eveniet nemo, sed, amet consectetur eos
+                    velit
+                    vel hic maiores saepe illum molestias? Architecto corporis delectus laboriosam aspernatur hic veritatis.</p>
+                    
+            </div>
+            
+            
+           
+        </div>
+               
+    </dialog>
+
+    <section id="home">
+
+
+        <div class="home-overlay">
+            <h1 id="mainText">Explore The Vast World of Movies</h1>
+            <button id="Explore-Movies" class="button font-monospace"><img id="icon-movie" src="images/camera.png"
+                    class="me-3"></img>Explore Movies</button>
+
+
+            <div class="home-search-box">
+                <div class="input-group ">
+                    <div class="form-outline ">
+                        <select id="select-list">
+                            <option value="movie">Movies</option>
+                            <option value="tv">Tv</option>
+                        </select>
+                        <input type="search" id="form1" class="form-control" />
+
+                        <label class="form-label" for="form1"></label>
+                    </div>
+                    <button type="button" id="search-button-home" class="btn button-search">
+                        <i class="fas fa-search text-white"></i>
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+    <!--  -->
+    <div class="container  mt-5 p-5">
+        <div class="row ">
+            <div class="col-md-7 d-none  d-sm-block">
+                <div id="carouselExampleInterval" class="carousel slide" data-mdb-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active h-75 overflow-hidden" data-mdb-interval="10000">
+                            <img src="images/1.jpg" class="d-block w-100  " height="400px" alt="Wild Landscape" />
+                        </div>
+                        <div class="carousel-item overflow-hidden " data-mdb-interval="2000">
+                            <img src="images/R (6).jpg" class="d-block w-100 " height="400px" alt="Camera" />
+                        </div>
+                        <div class="carousel-item overflow-hidden ">
+                            <img src="images/R (3).jpg" class="d-block w-100 " height="400px" alt="Exotic Fruits" />
+                        </div>
+
+                        <div class="carousel-item overflow-hidden ">
+                            <img src="images/R (2).jpg" class="d-block w-100 " height="400px" alt="Exotic Fruits" />
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-mdb-target="#carouselExampleInterval" type="button"
+                        data-mdb-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-mdb-target="#carouselExampleInterval" type="button"
+                        data-mdb-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-5" id="web-description">
+                <div id="overlay-text">
+                    <h1 class="text-center">Movie Magic</h1>
+                    <p>Welcome to a world of cinematic wonders. Immerse yourself in captivating films, from timeless
+                        classics to the latest
+                        blockbusters. Explore genres, uncover hidden gems, and ignite your passion for the silver
+                        screen.
+                    </p>
+
+                    <p> Unleash your inner cinephile with our intuitive interface. Browse, choose, and indulge in a
+                        seamless
+                        movie-watching
+                        experience. Dive into exclusive content, behind-the-scenes features, and a community of fellow
+                        movie
+                        lovers.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="section-movies-container">
+        <div class="container">
+            <h1 id="movie-header"></h1>
+            <div class="row" id="movie-row"></div>
+        </div>
+
+        <div class="container">
+            <h1 id="tv-header"></h1>
+            <div class="row" id="tv-serial-row"></div>
+        </div>
+
+        <div class="container">
+            <h1 id="anime-header"></h1>
+            <div class="row" id="anime-row"></div>
+        </div>
+
+    </section>
+
+
+    <!--<section id="section-movies-Discover">
+         <div class="container">
+            <h1 class="text-white" id="search-results-text"></h1>
+            <div class="row p-4 " id="search-results-row">
+            
+            </div>
+        </div>
+        <div class="container p-2 mt-">
+            <h1 id="header-discover"></h1>
+            <div class="row p-4 " id="movie-row">
+
+            </div>
+        </div>
+    </section>
+    <section id="section-movies-trending">
+        <div class="container p-2 mt-4">
+            <h1 id="header-trending-movies"></h1>
+            <div class="row p-4" id="trending-today"></div>
+        </div>
+    </section>
+
+
+   
+
+    <section id="section-tv-shows">
+        <div class="container p-2 mt-4">
+            <h1 id="header-tv">Tv Shows</h1>
+            <div class="row p-4" id="shows-tv"></div>
+        </div>
+    </section>
+
+    <section id="section-tv-discover">
+        <div class="container p-2 mt-4">
+            <h1 id="header-popular-tv">Popular TV Shows</h1>
+            <div class="row p-4" id="popular-tv"></div>
+        </div>
+    </section>
+
+    
+    <div class="container p-2 mt-4">
+        <h1 id="header-top-rated-tv">Top Rated Tv Shows</h1>
+        <div class="row p-4" id="top-rated-tv"></div>
+    </div> -->
+
+
+    <!-- <section id="topTvSerials">
+        <div class="container">
+            <h1>Top TV Serials</h1>
+            <div class="row p-4 " id="movie-row">
+        </div>
+       
+        
+        </div>
+    </section> -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
+                        class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-white" href="#">Made By Mikyas Moges </a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+    <script src="js/movies.js"></script>
+    <script src="https://kit.fontawesome.com/f66c9b28a9.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>
